@@ -44,5 +44,26 @@ pipeline{
                 }
             }
         }
+        stage('check-pwd'){
+            steps{
+                sh 'pwd'
+            }
+        }
+        stage('parallel-3'){
+            parallel{
+                stage('francisca-parallel-stage1'){
+                    steps{
+                        sh 'cat /etc/passwd'
+                        echo "welcome Eng. francisca "
+                    }
+                }
+                stage('francisca-parallel-stage2'){
+                    steps{
+                        sh 'chmod +x francisca.sh'
+                        sh 'bash -x francisca.sh'
+                    }
+                }
+            }
+        }
     }
 }

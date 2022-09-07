@@ -23,5 +23,26 @@ pipeline{
                 }
             }
         }
+        stage('check-cpu'){
+            steps{
+                sh 'lscpu'
+            }
+        }
+        stage('parallel-2'){
+            parallel{
+                stage('claudi-parallel-stage1'){
+                    steps{
+                        sh 'cat /etc/passwd'
+                        echo "My name is Claudi"
+                    }
+                }
+                stage('claudi-parallel-stage2'){
+                    steps{
+                        sh 'chmod +x claudi.sh'
+                        sh 'bash -x claudi.sh'
+                    }
+                }
+            }
+        }
     }
 }

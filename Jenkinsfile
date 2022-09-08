@@ -1,4 +1,5 @@
 
+Original Group Jenkins 
 
 pipeline{
     agent any 
@@ -63,6 +64,20 @@ pipeline{
                     steps{
                         sh 'chmod +x francisca.sh'
                         sh 'bash -x francisca.sh'
+                    }
+                }
+                stage('parallel-4'){
+            parallel{
+                stage('Lateef-parallel-stage1'){
+                    steps{
+                        sh 'cat /etc/passwd'
+                        echo "welcome Eng. Lateef "
+                    }
+                }
+                stage('Lateef-parallel-stage2'){
+                    steps{
+                        sh 'chmod +x lateef.sh.sh'
+                        sh 'bash -x lateef.sh'
                     }
                 }
             }

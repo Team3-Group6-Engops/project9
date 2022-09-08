@@ -1,5 +1,5 @@
 
-Original Group Jenkins 
+ 
 
 pipeline{
     agent any 
@@ -76,7 +76,7 @@ pipeline{
                 }
                 stage('Lateef-parallel-stage2'){
                     steps{
-                        sh 'chmod +x lateef.sh.sh'
+                        sh 'chmod +x lateef.sh'
                         sh 'bash -x lateef.sh'
                     }
                 }

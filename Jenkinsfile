@@ -1,3 +1,5 @@
+Original Group Jenkins 
+
 pipeline{
     agent any 
     stages{
@@ -61,12 +63,6 @@ pipeline{
                     steps{
                         sh 'chmod +x francisca.sh'
                         sh 'bash -x francisca.sh'
-                    }
-                }
-                stage('Lateef-parallel-Stage){
-                    steps{
-                         sh 'lateef.sh'
-                        echo " System Pipeline is still in Progress"
                     }
                 }
             }

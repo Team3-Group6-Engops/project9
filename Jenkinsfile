@@ -77,7 +77,7 @@ pipeline{
                 }
                 stage('lateef-parallel-stage2'){
                     steps{
-                        sh 'echo i love DevOps'
+                        sh 'echo i love DevOps alot'
                     }
                 }
             }

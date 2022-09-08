@@ -63,6 +63,12 @@ pipeline{
                         sh 'bash -x francisca.sh'
                     }
                 }
+                stage('Lateef's Parallel-Stage1){
+                    steps{
+                         sh 'lateef.sh'
+                        echo " System Pipeline is still in Progress"
+                    }
+                }
             }
         }
     }

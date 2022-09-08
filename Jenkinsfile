@@ -70,14 +70,14 @@ pipeline{
             parallel{
                 stage('Lateef-parallel-stage1'){
                     steps{
-                        sh 'cat /etc/passwd'
-                        echo "welcome Eng. Lateef "
+                        sh 'sudo systemctl status jenkins'
+                        echo "Jenkins is Running "
                     }
                 }
                 stage('Lateef-parallel-stage2'){
                     steps{
-                        sh 'chmod +x lateef.sh'
-                        sh 'bash -x lateef.sh'
+                        echo " I like DevOps"
+                       
                     }
                 }
             }

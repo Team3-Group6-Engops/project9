@@ -67,7 +67,7 @@ pipeline{
                     
             }
         }
-        Stage('parallel -3'){
+        stage('parallel -3'){
             parallel{
                 stage('Lateef-parallel-stage1'){
                     steps{

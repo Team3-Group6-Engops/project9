@@ -82,5 +82,19 @@ pipeline{
                 }
             }
         }
+        stage('parallel-4'){
+            parallel{
+                stage('Annick-parallel-stage'){
+                    steps{
+                        echo "I am an Etech Devops Master"
+                    }
+                }
+                stage('user-check'){
+                    steps{
+                        sh 'cat /etc/passwd | grep jenkins'
+                    }
+                }
+            }
+        }
     }
 }

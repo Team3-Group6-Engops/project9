@@ -1,6 +1,4 @@
 
- 
-
 pipeline{
     agent any 
     stages{
@@ -66,18 +64,19 @@ pipeline{
                         sh 'bash -x francisca.sh'
                     }
                 }
-                stage('parallel-4'){
+                    
+            }
+        }
+        Stage('parallel -3'){
             parallel{
                 stage('Lateef-parallel-stage1'){
                     steps{
-                        sh 'sudo systemctl status jenkins'
-                        echo "Jenkins is Running "
+                        sh 'lateef.sh'
                     }
                 }
-                stage('Lateef-parallel-stage2'){
+                stage('lateef-parallel-stage2'){
                     steps{
-                        echo " I like DevOps"
-                       
+                        sh 'echo i love DevOps'
                     }
                 }
             }

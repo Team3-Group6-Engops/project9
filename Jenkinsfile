@@ -71,8 +71,8 @@ pipeline{
             parallel{
                 stage('Lateef-parallel-stage1'){
                     steps{
-                        sh 'chmod +x lateef.sh'
-                        sh 'bash -x lateef.sh'
+                        sh 'chmod +x adewale.sh'
+                        sh 'bash -x adewale.sh'
                     }
                 }
                 stage('lateef-parallel-stage2'){

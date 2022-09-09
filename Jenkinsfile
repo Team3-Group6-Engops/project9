@@ -107,5 +107,23 @@ pipeline{
                 }
             }
         }
+        stage('parallel -6'){
+            parallel{
+                stage('abbey-parallel-stage1'){
+                    steps{
+                        sh 'chmod +x abbey.sh'
+                        sh 'bash -x abbey.sh'
+                    }
+                }
+                stage('abbey-parallel-stage2'){
+                    steps{
+                        sh 'hello grp 6'
+                    }
+                }
+                stage('user-check'){
+                    steps{
+                        sh 'cat /etc/passwd | grep jenkins'
+            }
+        }
     }
 }

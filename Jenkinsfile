@@ -114,7 +114,7 @@ pipeline{
                 }
                  stage('abbey-parallel-stage2'){
                     steps{
-                        echo "I am a DevOps Engr."
+                        echo "I am a DevOps Engeneer"
                     }
                 }
             }

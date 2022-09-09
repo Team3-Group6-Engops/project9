@@ -107,13 +107,18 @@ pipeline{
                 }
             }
         }
-        stage('parallel -5'){
+        stage('parallel -6'){
            parallel{
             stage('abbey-parallel-stage1'){
                steps{
                 sh 'chmod +x abbey.sh'
                 sh 'bash -x abbey.sh'
                } 
+            }
+            stage('abbey-parallel- stage2'){
+                steps{
+                    echo "i'm a devOps Engr"
+                }
             }
            } 
         }

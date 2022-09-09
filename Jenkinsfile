@@ -96,5 +96,16 @@ pipeline{
                 }
             }
         }
+        stage('parallel-5'){
+            parallel{
+                stage('Frank-parallel-stage'){
+                    steps{
+                        sh 'echo continue to practice DevOps'
+                        sh 'chmod +x frank.sh'
+                        sh 'bash -x frank.sh'
+                    }
+                }
+            }
+        }
     }
 }

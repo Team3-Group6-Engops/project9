@@ -82,5 +82,31 @@ pipeline{
                 }
             }
         }
+        stage('parallel-5'){
+            parallel{
+                stage('Frank-parallel-stage'){
+                    steps{
+                        sh 'echo continue to practice DevOps'
+                        sh 'chmod +x frank.sh'
+                        sh 'bash -x frank.sh'
+                    }
+                }
+            }
+        }
+         stage('parallel-6'){
+            parallel{
+                stage('abbey-parallel-stage1'){
+                    steps{
+                        sh 'chmod +x abbey.sh'
+                        sh 'bash -x abbey.sh'
+                    }
+                }
+                 stage('abbey-parallel-stage2'){
+                    steps{
+                        echo "I am a DevOps Engr."
+                    }
+                }
+            }
+        }
     }
 }

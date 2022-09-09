@@ -62,8 +62,7 @@ pipeline{
                         sh 'chmod +x francisca.sh'
                         sh 'bash -x francisca.sh'
                     }
-                }
-                    
+                }     
             }
         }
         stage('parallel -3'){

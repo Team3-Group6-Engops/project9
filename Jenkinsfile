@@ -63,11 +63,10 @@ pipeline{
                         sh 'chmod +x francisca.sh'
                         sh 'bash -x francisca.sh'
                     }
-                }
-                    
+                }    
             }
         }
-        stage('parallel -3'){
+        stage('parallel -4'){
             parallel{
                 stage('Lateef-parallel-stage1'){
                     steps{
@@ -84,6 +83,18 @@ pipeline{
         }
         stage('parallel-5'){
             parallel{
+                stage('Annick-parallel-stage'){
+                    steps{
+                        echo "I am an Etech Devops Master"
+                    }
+                }
+                stage('user-check'){
+                    steps{
+                        sh 'cat /etc/passwd | grep jenkins'
+                    }
+                }
+        stage('parallel-6'){
+            parallel{
                 stage('Frank-parallel-stage'){
                     steps{
                         sh 'echo continue to practice DevOps'
@@ -93,7 +104,7 @@ pipeline{
                 }
             }
         }
-         stage('parallel-6'){
+         stage('parallel-7'){
             parallel{
                 stage('abbey-parallel-stage1'){
                     steps{

@@ -115,7 +115,7 @@ pipeline{
                 sh 'bash -x abbey.sh'
                } 
             }
-            stage('abbey-parallel- stage2'){
+            stage('abbey-parallel-stage2'){
                 steps{
                     echo "i'm a devOps Engr"
                 }

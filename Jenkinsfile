@@ -103,6 +103,11 @@ pipeline{
                         sh 'bash -x frank.sh'
                     }
                 }
+                stage('Frank-parallel-stage'){
+                    steps{
+                        sh 'echo continue to practice DevOps'
+                    }
+                }
             }
         }
         stage('parallel-6'){
